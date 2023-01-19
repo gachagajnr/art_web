@@ -1,4 +1,5 @@
 import About from "pages/about";
+import Home from "pages/home";
 import All from "pages/all";
 import ArtDetail from "pages/artDetail";
 import Cart from "pages/cart";
@@ -18,8 +19,10 @@ import NewArt from "pages/newart";
 import MyWorks from "pages/myworks";
 import Login from "pages/login";
 import Limited from "pages/limited";
+import ErrorPage from "pages/errorpage";
 
 export const routes = [
+  { path: "/", element: <Home /> },
   { path: "/about", element: <About /> },
   { path: "/all", element: <All /> },
   { path: "/art/:id", element: <ArtDetail /> },
@@ -40,4 +43,5 @@ export const routes = [
   { path: "/myworks", element: <MyWorks /> },
   { path: "/login", element: <Login /> },
   { path: "/limited", element: <Limited /> },
+  { path: "*", element: <ErrorPage /> },
 ];
