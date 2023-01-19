@@ -8,6 +8,18 @@ import ArtEdit from "pages/artEdit";
 import Contact from "pages/contact_us";
 import Customs from "pages/customs";
 import Drawings from "pages/drawings";
+import Terms from "pages/terms";
+import Sell from "pages/sell";
+import Sculptures from "pages/sculptures";
+import Register from "pages/register";
+import Privacy from "pages/privacy";
+import Prints from "pages/prints";
+import Photography from "pages/photography";
+import Paintings from "pages/paintings";
+import NewArt from "pages/newart";
+import MyWorks from "pages/myworks";
+import Login from "pages/login";
+import Limited from "pages/limited";
 
 export const routes = [
   { path: "/", element: <Home />, errorElement: <ErrorPage /> },
@@ -19,20 +31,16 @@ export const routes = [
   { path: "/drawings", element: <Drawings /> },
   { path: "/cart", element: <Cart /> },
   { path: "/edit", element: <ArtEdit /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
-  { path: "/", element: <Home /> },
+  { path: "/terms", element: <Terms /> },
+  { path: "/sell", element: <Sell /> },
+  { path: "/sculptures", element: <Sculptures /> },
+  { path: "/register", element: <Register /> },
+  { path: "/privacy", element: <Privacy /> },
+  { path: "/prints", element: <Prints /> },
+  { path: "/photography", element: <Photography /> },
+  { path: "/paintings", element: <Paintings /> },
+  { path: "/new", element: <NewArt /> },
+  { path: "/myworks", element: <MyWorks /> },
+  { path: "/login", element: <Login /> },
+  { path: "/limited", element: <Limited /> },
 ];
