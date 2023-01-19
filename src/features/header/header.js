@@ -11,7 +11,7 @@ function Header({ isAuthenticated, name, cartTotal }) {
   return (
     <Navbar bg="light" variant="light">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           <img
             alt=""
             src="/logo.svg"
@@ -25,23 +25,21 @@ function Header({ isAuthenticated, name, cartTotal }) {
         {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/about">
-                About
-              <Link to="/About"/>
+            <Nav.Link as={Link} to="/about">
+              About
             </Nav.Link>
-            <Nav.Link href="/sell">
-                Sell
-              <Link to="/sell"/>
+            <Nav.Link as={Link} to="/sell">
+              Sell
             </Nav.Link>
           </Nav>
           <Nav>
             {isAuthenticated ? (
               <>
-                <Nav.Link href="/profile">
+                <Nav.Link as={Link} to="/profile">
                   {name}
                   <Link to="/profile" />
                 </Nav.Link>
-                <Nav.Link eventKey={2} href="/cart">
+                <Nav.Link eventKey={2} as={Link} to="/cart">
                   <Cart2 size={25} />
                   <Badge pill bg="primary">
                     {cartTotal}
@@ -50,11 +48,10 @@ function Header({ isAuthenticated, name, cartTotal }) {
               </>
             ) : (
               <>
-                <Nav.Link eventKey={2} href="/login">
+                <Nav.Link to="/login" as={Link}>
                   Login
-                  <Link to="/login" />
-                </Nav.Link>{" "}
-                <Nav.Link eventKey={2} href="/cart">
+                </Nav.Link>
+                <Nav.Link as={Link} to="/cart">
                   <Cart2 size={25} />
                   <Badge pill bg="primary">
                     {cartTotal}

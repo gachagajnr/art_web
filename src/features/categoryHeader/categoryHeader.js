@@ -8,8 +8,8 @@ function CategoryHeader() {
       {artCategories.map((category) => {
         return (
           <Nav.Item>
-            <Nav.Link  >
-              <Link to={category.path}>{category.name}</Link>
+            <Nav.Link as={Link} to={category.path}>
+              {category.name}
             </Nav.Link>
           </Nav.Item>
         );
