@@ -18,7 +18,7 @@ export default function Home() {
   ];
   return (
     <>
-      <HomeCarousel />
+      {/* <HomeCarousel /> */}
       <Container>
         <motion.div
           variants={container}

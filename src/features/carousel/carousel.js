@@ -2,12 +2,13 @@ import Carousel from "react-bootstrap/Carousel";
 
 function HomeCarousel() {
   return (
-    <Carousel variant="dark"  >
+    <Carousel variant="dark" style={{ height: "250px" }}>
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
+          src="http://3.bp.blogspot.com/_EqZzf-l7OCg/TNmdtcyGBZI/AAAAAAAAAD8/KD5Y23c24go/s1600/homer-simpson-1280x1024.jpg"
           alt="First slide"
+          height="200px"
         />
         <Carousel.Caption>
           <h3>First slide label</h3>
@@ -17,8 +18,9 @@ function HomeCarousel() {
       <Carousel.Item interval={500}>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          src="http://3.bp.blogspot.com/_EqZzf-l7OCg/TNmdtcyGBZI/AAAAAAAAAD8/KD5Y23c24go/s1600/homer-simpson-1280x1024.jpg"
           alt="Second slide"
+          height="200px"
         />
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -28,8 +30,10 @@ function HomeCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          src="http://3.bp.blogspot.com/_EqZzf-l7OCg/TNmdtcyGBZI/AAAAAAAAAD8/KD5Y23c24go/s1600/homer-simpson-1280x1024.jpg"
           alt="Third slide"
+          height="200px"
+          background-size="contain"
         />
         <Carousel.Caption>
           <h3>Third slide label</h3>
