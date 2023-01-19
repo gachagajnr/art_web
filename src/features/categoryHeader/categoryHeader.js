@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function CategoryHeader() {
   return (
-    <Nav className="justify-content-center" activeKey="/home">
+    <Nav className="justify-content-center" activeKey="/">
       {artCategories.map((category) => {
         return (
           <Nav.Item>

@@ -9,7 +9,7 @@ import { Cart2 } from "react-bootstrap-icons";
 
 function Header({ isAuthenticated, name, cartTotal }) {
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar bg="light" variant="light" sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img

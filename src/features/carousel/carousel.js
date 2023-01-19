@@ -2,7 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 function HomeCarousel() {
   return (
-    <Carousel variant="dark">
+    <Carousel variant="dark"  >
       <Carousel.Item interval={1000}>
         <img
           className="d-block w-100"

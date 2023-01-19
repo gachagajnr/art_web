@@ -1,6 +1,4 @@
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container"; 
 import { motion } from "framer-motion";
 import HomeCarousel from "features/carousel/carousel";
 import ArtCard from "features/artcard/artcard";
@@ -9,19 +7,19 @@ import MasonryGrid from "features/masonrygrid/masonrygrid";
 
 export default function Home() {
   const arts = [
-    { name: "Home", description: "The fuck i want done", btnName: "Buy" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy" },
+    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
+    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
+    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
+    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
+    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
+    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
+    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
+    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
   ];
   return (
     <>
       <HomeCarousel />
-      <Container className="mt-4">
+      <Container>
         <motion.div
           variants={container}
           initial="hidden"
@@ -33,13 +31,11 @@ export default function Home() {
         >
           <h3>ArtyLand</h3>
         </motion.div>
-        <div className="wrapper mt-4">
-          <MasonryGrid>
-            {arts?.map((item) => (
-              <ArtCard item={item} />
-            ))}
-          </MasonryGrid>
-        </div>
+        <MasonryGrid>
+          {arts?.map((item) => (
+            <ArtCard item={item} />
+          ))}
+        </MasonryGrid>
         <div className="mt-5 d-flex justify-content-center">
           {/* <PaginationCo
           mp totalPages={latestTotalPages} /> */}
