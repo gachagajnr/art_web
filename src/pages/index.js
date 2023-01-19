@@ -1,19 +1,16 @@
-import Home from "./home";
-import About from "./about";
-import ErrorPage from "./errorpage";
+import { routes } from "constants/routes";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-]);
+const router = createBrowserRouter(
+  routes.map((route) => {
+    return {
+      path: route.path,
+      element: route.element,
+      errorElement: route.errorElement,
+    };
+  })
+);
 
 export default function Index() {
   return (
