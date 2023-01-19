@@ -1,4 +1,5 @@
 import { routes } from "constants/routes";
+import Header from "features/header/header";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -15,7 +16,7 @@ const router = createBrowserRouter(
 export default function Index() {
   return (
     <>
-      <header>Arty Land</header>
+      <Header  isAuthenticated={false} name="Pius" cartTotal={4} />
       <RouterProvider router={router} />
     </>
   );
