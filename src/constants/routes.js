@@ -1,6 +1,4 @@
-import Home from "pages/home";
 import About from "pages/about";
-import ErrorPage from "pages/errorpage";
 import All from "pages/all";
 import ArtDetail from "pages/artDetail";
 import Cart from "pages/cart";
@@ -22,7 +20,6 @@ import Login from "pages/login";
 import Limited from "pages/limited";
 
 export const routes = [
-  { path: "/", element: <Home />, errorElement: <ErrorPage /> },
   { path: "/about", element: <About /> },
   { path: "/all", element: <All /> },
   { path: "/art/:id", element: <ArtDetail /> },

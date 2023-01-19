@@ -1,23 +1,19 @@
+import { Routes, Route } from "react-router-dom";
 import { routes } from "constants/routes";
-import Header from "features/header/header";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-const router = createBrowserRouter(
-  routes.map((route) => {
-    return {
-      path: route.path,
-      element: route.element,
-      errorElement: route.errorElement,
-    };
-  })
-);
+import Layout from "./layout";
+// import About from "./about";
+import ErrorPage from "./errorpage";
 
 export default function Index() {
   return (
-    <>
-      <Header  isAuthenticated={false} name="Pius" cartTotal={4} />
-      <RouterProvider router={router} />
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Layout />} />
+        {routes.map((route) => {
+          return <Route path={route.path} element={route.element} />;
+        })}
+        <Route path="*" element={<ErrorPage />} />
+      </Route>
+    </Routes>
   );
 }
