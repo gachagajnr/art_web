@@ -1,7 +1,15 @@
-// This component acts as index for routing
+import Home from "./home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const Index = () => {
-  return <h1>Home</h1>;
-};
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
+
+function Index() {
+  return <RouterProvider router={router} />;
+}
 
 export default Index;
