@@ -1,0 +1,1 @@
+// This component acts as index for routing
