@@ -12,8 +12,7 @@ function ArtList() {
   } = useGetPostsQuery();
 
   let postContent;
-
-  if (isLoading) {
+   if (isLoading) {
     postContent = (
       <div className="d-flex justify-content-center">
         <div className="spinner-border" role="status">
@@ -23,7 +22,7 @@ function ArtList() {
     );
   } else if (isSuccess) {
     postContent = (
-      <MasonryGrid>
+      <MasonryGrid >
         {arts.map((item) => {
           return <ArtCard item={item} />;
         })}
@@ -32,7 +31,7 @@ function ArtList() {
   } else if (isError) {
     postContent = (
       <div className="alert alert-danger" role="alert">
-        {error}
+        {error.status}
       </div>
     );
   }

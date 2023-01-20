@@ -4,7 +4,7 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      staggerChildren: 0.08,
+      staggerChildren: 0.09,
     },
   },
 };
