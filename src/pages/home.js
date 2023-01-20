@@ -1,4 +1,4 @@
-import Container from "react-bootstrap/Container"; 
+import Container from "react-bootstrap/Container";
 import { motion } from "framer-motion";
 // import HomeCarousel from "features/carousel/carousel";
 import ArtCard from "features/artcard/artcard";
@@ -7,14 +7,54 @@ import MasonryGrid from "features/masonrygrid/masonrygrid";
 
 export default function Home() {
   const arts = [
-    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
-    { name: "Home", description: "The fuck i want done", btnName: "Buy", price:"359" },
+    {
+      name: "Home",
+      description: "The fuck i want done",
+      btnName: "Buy",
+      price: "359",
+    },
+    {
+      name: "Home",
+      description: "The fuck i want done",
+      btnName: "Buy",
+      price: "359",
+    },
+    {
+      name: "Home",
+      description: "The fuck i want done",
+      btnName: "Buy",
+      price: "359",
+    },
+    {
+      name: "Home",
+      description: "The fuck i want done",
+      btnName: "Buy",
+      price: "359",
+    },
+    {
+      name: "Home",
+      description: "The fuck i want done",
+      btnName: "Buy",
+      price: "359",
+    },
+    {
+      name: "Home",
+      description: "The fuck i want done",
+      btnName: "Buy",
+      price: "359",
+    },
+    {
+      name: "Home",
+      description: "The fuck i want done",
+      btnName: "Buy",
+      price: "359",
+    },
+    {
+      name: "Home",
+      description: "The fuck i want done",
+      btnName: "Buy",
+      price: "359",
+    },
   ];
   return (
     <>
@@ -36,11 +76,6 @@ export default function Home() {
             <ArtCard item={item} />
           ))}
         </MasonryGrid>
-        <div className="mt-5 d-flex justify-content-center">
-          {/* <PaginationCo
-          mp totalPages={latestTotalPages} /> */}
-          <>Border</>
-        </div>
       </Container>
     </>
   );
