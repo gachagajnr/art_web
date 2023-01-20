@@ -5,22 +5,19 @@ import ArtList from "features/art/artList";
 
 export default function Home() {
   return (
-    <>
-      {/* <HomeCarousel /> */}
-      <Container>
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          className="text-center pt-3"
-          style={{
-            gap: "5px 15px",
-          }}
-        >
-          <h3 className="text-center">ArtyLand</h3>
-        </motion.div>
-        <ArtList />
-      </Container>
-    </>
+    <Container>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="text-center pt-3"
+        style={{
+          gap: "5px 15px",
+        }}
+      >
+        <h3 className="text-center">ArtyLand</h3>
+      </motion.div>
+      <ArtList />
+    </Container>
   );
 }

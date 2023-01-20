@@ -14,7 +14,7 @@ function ArtList() {
   let postContent;
    if (isLoading) {
     postContent = (
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center p-t 15">
         <div className="spinner-border" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>

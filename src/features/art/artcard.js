@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-import Container from "react-bootstrap/Container";
-import Stack from "react-bootstrap/Stack";
+ import Stack from "react-bootstrap/Stack";
 import PropTypes from "prop-types";
 import Collapse from "react-bootstrap/Collapse";
 
@@ -17,7 +16,6 @@ function ArtCard({ item }) {
         alt=""
         style={{ width: "100%", display: "block" }}
         height="auto"
-        // background-size="contain"
         src="http://3.bp.blogspot.com/_EqZzf-l7OCg/TNmdtcyGBZI/AAAAAAAAAD8/KD5Y23c24go/s1600/homer-simpson-1280x1024.jpg"
       />
 
