@@ -16,8 +16,8 @@ function ArtCard({ item }) {
       <div className="border-bottom">
         <img
           alt=""
-          width="100%"
-          height="100%"
+          width="200px"
+          height="auto"
           background-size="contain"
           class="rounded-top"
           src="http://3.bp.blogspot.com/_EqZzf-l7OCg/TNmdtcyGBZI/AAAAAAAAAD8/KD5Y23c24go/s1600/homer-simpson-1280x1024.jpg"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ArtCard from "features/artcard/artcard";
 import { container } from "helpers/framer-motion";
 import MasonryGrid from "features/masonrygrid/masonrygrid";
+import ArtList from 'features/art/artList'
 
 export default function Home() {
   const arts = [
@@ -71,11 +72,10 @@ export default function Home() {
         >
           <h3 className="text-center">ArtyLand</h3>
         </motion.div>
-        <MasonryGrid>
-          {arts?.map((item) => (
-            <ArtCard item={item} />
-          ))}
-        </MasonryGrid>
+         
+         
+          <ArtList />
+        
       </Container>
     </>
   );
