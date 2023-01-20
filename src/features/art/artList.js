@@ -1,5 +1,5 @@
 import { useGetPostsQuery } from "./artApi";
-import ArtCard from "features/artcard/artcard";
+import ArtCard from "features/art/artcard";
 import MasonryGrid from "features/masonrygrid/masonrygrid";
 
 function ArtList() {

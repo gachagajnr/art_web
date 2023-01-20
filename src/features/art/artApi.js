@@ -1,14 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// A mock function to mimic making an async request for data
-export function fetchArt() {
-  return fetch("https://jsonplaceholder.typicode.com/todos")
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-}
+ 
 
-export const apiSlice = createApi({
-  reducerPath: "apiSlice",
+export const artSlice = createApi({
+  reducerPath: "artSlice",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://jsonplaceholder.typicode.com",
   }),
@@ -20,4 +15,4 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useGetPostsQuery } = apiSlice;
+export const { useGetPostsQuery } = artSlice;
