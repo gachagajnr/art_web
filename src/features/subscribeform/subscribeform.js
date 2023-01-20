@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Stack from "react-bootstrap/Stack";
 import SocialIcons from "features/socialicons/socialicons";
+import QuickLinks from "features/quicklinks/quicklinks";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,10 +10,11 @@ import Col from "react-bootstrap/Col";
 function SubscribeForm() {
   return (
     <Container>
+      <h4 className="text-center pt-5">Follow Us More On;</h4>
       <Row>
         <Col sm={8}>
-          <div className="mt-2 p-5 d-flex justify-content-center">
-            QuickLinks
+          <div className="mt-1 p-5 d-flex justify-content-center">
+            <QuickLinks />
           </div>
         </Col>
         <Col sm={4}>
@@ -35,4 +37,3 @@ function SubscribeForm() {
   );
 }
 export default SubscribeForm;
-
