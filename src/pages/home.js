@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container"; 
 import { motion } from "framer-motion";
-import HomeCarousel from "features/carousel/carousel";
+// import HomeCarousel from "features/carousel/carousel";
 import ArtCard from "features/artcard/artcard";
 import { container } from "helpers/framer-motion";
 import MasonryGrid from "features/masonrygrid/masonrygrid";
