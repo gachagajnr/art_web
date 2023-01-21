@@ -7,20 +7,13 @@ import Collapse from "react-bootstrap/Collapse";
 
 import { ThreeDotsVertical } from "react-bootstrap-icons";
 
-function ArtCard({ item }) {
+function ArtDetailsCard({ item }) {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
   const { name, description, price, category } = item;
   return (
-    <div
-      className="border-bottom"
-      onClick={() =>
-        navigate("/art", {
-          state: item,
-        })
-      }
-    >
+    <div className="border-bottom">
       <img
         alt=""
         style={{ width: "100%", display: "block" }}
@@ -39,16 +32,14 @@ function ArtCard({ item }) {
         <ThreeDotsVertical onClick={() => setOpen(!open)} />
       </Stack>
 
-      <Collapse in={open}>
-        <p class="font-italic"> {description}</p>
-      </Collapse>
+      <p class="font-italic"> {description}</p>
     </div>
   );
 }
 
-ArtCard.propTypes = {
+ArtDetailsCard.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   price: PropTypes.number,
 };
-export default ArtCard;
+export default ArtDetailsCard;

@@ -17,7 +17,7 @@ export default function Home() {
       >
         <h3 className="text-center">ArtyLand</h3>
       </motion.div>
-      <ArtList />
+      <ArtList  />
     </Container>
   );
 }

@@ -2,7 +2,7 @@ const links = {
   ABOUT: "/about",
   PROFILE: "/profile",
   ALL: "/all",
-  ARTDETAIL: "/art/:id",
+  ARTDETAIL: "/art",
   ARTEDIT: "/art/edit/:id",
   CART: "/cart",
   CONTACT: "/contact-us",

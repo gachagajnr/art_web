@@ -1,15 +1,14 @@
-import { useGetArtsQuery } from "./artApi";
-import ArtCard from "features/art/artcard";
-import MasonryGrid from "features/masonrygrid/masonrygrid";
+import { useGetArtQuery } from "./artApi";
+import ArtDetailsCard from "./artDetailsCard";
 
-function ArtList(props) {
+function ArtDetails(props) {
   const {
-    data: arts,
+    data: art,
     isLoading,
     isSuccess,
     isError,
     error,
-  } = useGetArtsQuery();
+  } = useGetArtQuery(props._id);
 
   let postContent;
   if (isLoading) {
@@ -21,13 +20,7 @@ function ArtList(props) {
       </div>
     );
   } else if (isSuccess) {
-    postContent = (
-      <MasonryGrid>
-        {arts.map((item) => {
-          return <ArtCard item={item} onClick={props.onClick} />;
-        })}
-      </MasonryGrid>
-    );
+    postContent = <ArtDetailsCard item={art}/>;
   } else if (isError) {
     postContent = (
       <div className="alert alert-danger" role="alert">
@@ -38,4 +31,4 @@ function ArtList(props) {
 
   return <div>{postContent}</div>;
 }
-export default ArtList;
+export default ArtDetails;

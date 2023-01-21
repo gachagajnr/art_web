@@ -1,15 +1,14 @@
-import { useEffect } from "react";
-import Container from "react-bootstrap/Container";
+ import Container from "react-bootstrap/Container";
 
-import { useDeleteArtQuery } from "features/art/artApi";
+import { useGetArtQuery } from "features/art/artApi";
 import { motion } from "framer-motion";
 import { container } from "helpers/framer-motion";
 
 export default function Paintings() {
   // useEffect(() => {
     // Update the document title using the browser API
-    const ddd = useDeleteArtQuery(1);
-    console.log("jdhfdjfhjd", ddd);
+    const {data} = useGetArtQuery(3);
+    console.log("jdhfdjfhjd", data);
   // });
   return (
     <Container>
