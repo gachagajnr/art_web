@@ -19,13 +19,13 @@ function ArtCard({ item }) {
         src="http://3.bp.blogspot.com/_EqZzf-l7OCg/TNmdtcyGBZI/AAAAAAAAAD8/KD5Y23c24go/s1600/homer-simpson-1280x1024.jpg"
       />
 
-      <h6 style={{ fontWeight: 200, paddingTop: 7 }}>The sun rises {name}</h6>
+      <h6 style={{ fontWeight: 200, paddingTop: 7 }}> {name}</h6>
       <p className="font-weight-light" style={{ fontSize: 13 }}>
-        Print{category}
+        {category}
       </p>
       <Stack direction="horizontal" gap={2}>
         <div className="ms-auto" />
-        <h6 style={{ fontSize: 14, fontWeight: 300 }}>KES 3700{price}</h6>
+        <h6 style={{ fontSize: 14, fontWeight: 300 }}>KES  {price}</h6>
 
         <ThreeDotsVertical onClick={() => setOpen(!open)} />
       </Stack>

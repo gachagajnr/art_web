@@ -1,4 +1,4 @@
-import { useGetPostsQuery } from "./artApi";
+import { useGetArtsQuery } from "./artApi";
 import ArtCard from "features/art/artcard";
 import MasonryGrid from "features/masonrygrid/masonrygrid";
 
@@ -9,10 +9,10 @@ function ArtList() {
     isSuccess,
     isError,
     error,
-  } = useGetPostsQuery();
+  } = useGetArtsQuery();
 
   let postContent;
-   if (isLoading) {
+  if (isLoading) {
     postContent = (
       <div className="d-flex justify-content-center p-t 15">
         <div className="spinner-border" role="status">
@@ -22,7 +22,7 @@ function ArtList() {
     );
   } else if (isSuccess) {
     postContent = (
-      <MasonryGrid >
+      <MasonryGrid>
         {arts.map((item) => {
           return <ArtCard item={item} />;
         })}
