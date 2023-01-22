@@ -1,13 +1,19 @@
-import Button from "react-bootstrap/Button";
+ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Formik } from "formik";
-import { Link } from "react-router-dom";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import {Link} from 'react-router-dom'
+import { Formik,  } from "formik";
+
 import * as Yup from "yup";
 import Stack from "react-bootstrap/Stack";
 
-function LoginForm() {
+function SignupForm() {
+ 
   const loginSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email address").required("Required"),
+    firstname: Yup.string().required("Required"),
+    lastname: Yup.string().required("Required"),
     password: Yup.string()
       .min(8, "Must be longer than 2 characters")
       .max(10, "Nice try, nobody has a first name that long")
@@ -17,10 +23,12 @@ function LoginForm() {
   return (
     <>
       <h3 style={{ margin: 20, fontWeight: 200 }}>
-        Login to your ArtyLand account
+        Create a new ArtyLand account
       </h3>
       <Formik
         initialValues={{
+          firstname: "",
+          lastname: "",
           email: "",
           password: "",
         }}
@@ -41,6 +49,46 @@ function LoginForm() {
           isSubmitting,
         }) => (
           <Form onSubmit={handleSubmit}>
+            <Row>
+              <Col>
+                <Form.Group className="mb-3" controlId="formFirstname">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    type="firstname"
+                    placeholder="Firstname"
+                    name="firstname"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.firstname}
+                    className={
+                      touched.firstname && errors.firstname ? "has-error" : null
+                    }
+                  />
+                  {touched.firstname && errors.firstname ? (
+                    <div className="error-message">{errors.firstname}</div>
+                  ) : null}
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" controlId="formLastname">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    type="lastname"
+                    placeholder="Lastname"
+                    name="lastname"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.lastname}
+                    className={
+                      touched.lastname && errors.lastname ? "has-error" : null
+                    }
+                  />
+                  {touched.lastname && errors.lastname ? (
+                    <div className="error-message">{errors.lastname}</div>
+                  ) : null}
+                </Form.Group>
+              </Col>
+            </Row>
             <Form.Group className="mb-3" controlId="formEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control
@@ -77,18 +125,20 @@ function LoginForm() {
 
             <div class="d-grid gap-2">
               <Button variant="primary" type="submit" disabled={isSubmitting}>
-                Login to Artyland account
+                create my Artyland account
               </Button>
             </div>
             <Stack style={{ textAlign: "center", margin: 5 }}>
               <hr />
+
               <Link
-                to="/register"
+                to="/login"
                 style={{ cursor: "pointer", textDecoration: "none" }}
               >
-                Create a new ArtyLand account
+                Login to your ArtyLand account
               </Link>
             </Stack>
+            {/* </FormikForm> */}
           </Form>
         )}
       </Formik>
@@ -96,4 +146,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default SignupForm;
