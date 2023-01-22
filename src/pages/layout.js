@@ -9,7 +9,7 @@ import Footer from "components/footer/footer";
 export default function Layout() {
   return (
     <>
-      <Header name="Pius" cartTotal={3} isAuthenticated={true} />
+      <Header name="Pius" cartTotal={3} isAuthenticated={false} />
       <CategotyHeader />
       {/* <Container> */}
         <Outlet />

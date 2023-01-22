@@ -17,7 +17,7 @@ function ArtCard({ item }) {
     <motion.div
       className="border-bottom"
       whileHover={{
-        scale: 0.9,
+        scale: 1.1,
         textShadow: "0px 0px 2px white",
       }}
     >

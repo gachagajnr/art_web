@@ -43,7 +43,7 @@ function Header({ isAuthenticated, name, cartTotal }) {
                   <Badge pill bg="primary">
                     {cartTotal}
                   </Badge>
-                </Nav.Link>{" "}
+                </Nav.Link> 
               </>
             ) : (
               <>

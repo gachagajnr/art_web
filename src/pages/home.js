@@ -1,8 +1,7 @@
 import Container from "react-bootstrap/Container";
 import { motion } from "framer-motion";
 import { container } from "helpers/framer-motion";
-import ArtList from "features/art/artList";
-
+ 
 export default function Home() {
   return (
     <Container>
@@ -17,7 +16,6 @@ export default function Home() {
       >
         <h3 className="text-center">ArtyLand</h3>
       </motion.div>
-      <ArtList  />
     </Container>
   );
 }
