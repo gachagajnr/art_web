@@ -33,7 +33,7 @@ function LoginForm() {
               </Button>
             </div>
             <Stack style={{ textAlign: "center", margin: 5 }}>
-              {"Or"}
+              <hr/>
               <h6
                 onClick={() => setIsLogin(!isLogin)}
                 style={{ cursor: "pointer" }}
@@ -63,8 +63,8 @@ function LoginForm() {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control type="password" placeholder="ConfirmPassword" />
             </Form.Group>
             <div class="d-grid gap-2">
               <Button variant="primary" type="submit">
@@ -72,11 +72,10 @@ function LoginForm() {
               </Button>
             </div>
             <Stack style={{ textAlign: "center", margin: 5 }}>
-              {"Or"}
+             <hr/>
               <h6
-                // cursor="pointer"
-                onClick={() => setIsLogin(!isLogin)}
-                style={{ cursor: "pointer" }}
+                 onClick={() => setIsLogin(!isLogin)}
+                style={{ cursor: "pointer"}}
               >
                 Login to your account
               </h6>
