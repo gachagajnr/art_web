@@ -7,7 +7,7 @@ import LoginForm from "components/loginform/loginform";
 export default function Login() {
   return (
     <div>
-      <Container style={{ flex: 1, justifyContent: "space-between" }}>
+      <Container>
         <Row class="d-flex flex-wrap align-items-center">
           <Col sm>
             <Stack direction="vertical">
@@ -18,7 +18,6 @@ export default function Login() {
             </Stack>
           </Col>
           <Col sm>
-            <h3 style={{ fontWeight: 400, margin: 20 }}>Login To ArtyLand</h3>
             <LoginForm />
           </Col>
         </Row>
