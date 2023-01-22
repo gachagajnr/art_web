@@ -6,7 +6,7 @@ import { Filter } from "react-bootstrap-icons";
 
 function CategoryHeader() {
   return (
-    <Navbar sticky="top" bg="light" variant="light">
+    <Navbar sticky="top" bg="light" variant="light" className="border-top">
       <div
         style={{
           flex: 1,
