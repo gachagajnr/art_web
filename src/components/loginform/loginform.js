@@ -34,7 +34,12 @@ function LoginForm() {
             </div>
             <Stack style={{ textAlign: "center", margin: 5 }}>
               {"Or"}
-              <h6 onClick={() => setIsLogin(!isLogin)}>Create my Artyland account</h6>
+              <h6
+                onClick={() => setIsLogin(!isLogin)}
+                style={{ cursor: "pointer" }}
+              >
+                Create a new Artyland account
+              </h6>
             </Stack>
           </Form>
         </>
@@ -68,8 +73,12 @@ function LoginForm() {
             </div>
             <Stack style={{ textAlign: "center", margin: 5 }}>
               {"Or"}
-              <h6 onClick={() => setIsLogin(!isLogin)}>
-                Login to your aaccount
+              <h6
+                // cursor="pointer"
+                onClick={() => setIsLogin(!isLogin)}
+                style={{ cursor: "pointer" }}
+              >
+                Login to your account
               </h6>
             </Stack>
           </Form>
