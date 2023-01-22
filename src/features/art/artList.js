@@ -1,6 +1,6 @@
 import { useGetArtsQuery } from "./artApi";
 import ArtCard from "features/art/artcard";
-import MasonryGrid from "features/masonrygrid/masonrygrid";
+import MasonryGrid from "components/masonrygrid/masonrygrid";
 
 function ArtList(props) {
   const {

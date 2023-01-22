@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 
-function FlatButton({ name, variant, size }) {
+function FlatButton({ name, variant, size,icon }) {
   return (
     <Button variant={variant} size={size}>
-      {name}
+        {name}
     </Button>
   );
 }

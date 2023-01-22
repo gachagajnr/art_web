@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 function MasonryGrid(props) {
   return (
     <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 750: 3, 900: 4 }}>
-      <Masonry gutter="10px">{props.children}</Masonry>
+      <Masonry gutter="15px">{props.children}</Masonry>
     </ResponsiveMasonry>
   );
 }
