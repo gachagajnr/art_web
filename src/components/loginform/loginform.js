@@ -4,13 +4,18 @@ import { Formik } from "formik";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import Stack from "react-bootstrap/Stack";
+// import { useLoginMutation } from "features/user/userApi";
 
 function LoginForm() {
+  // const [login, { data: user, isLoading, isSuccess, isError, error }] =
+  //   useLoginMutation();
+
+  // console.log(user);
   const loginSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email address").required("Required"),
     password: Yup.string()
       .min(8, "Must be longer than 2 characters")
-      .max(10, "Nice try, nobody has a first name that long")
+      .max(15, "Nice try, nobody has a first name that long")
       .required("Required"),
   });
 
@@ -27,7 +32,7 @@ function LoginForm() {
         validationSchema={loginSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setSubmitting(true);
-          console.log(values);
+          // login(values);
           setSubmitting(false);
         }}
       >
@@ -76,7 +81,7 @@ function LoginForm() {
             </Form.Group>
 
             <div class="d-grid gap-2">
-              <Button variant="primary" type="submit" disabled={isSubmitting}>
+              <Button variant="primary" type="submit" >
                 Login to Artyland account
               </Button>
             </div>

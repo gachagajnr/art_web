@@ -52,7 +52,7 @@ function SignupForm() {
             <Row>
               <Col>
                 <Form.Group className="mb-3" controlId="formFirstname">
-                  <Form.Label>Email address</Form.Label>
+                  <Form.Label>Firstname</Form.Label>
                   <Form.Control
                     type="firstname"
                     placeholder="Firstname"
@@ -71,7 +71,7 @@ function SignupForm() {
               </Col>
               <Col>
                 <Form.Group className="mb-3" controlId="formLastname">
-                  <Form.Label>Email address</Form.Label>
+                  <Form.Label>Lastname</Form.Label>
                   <Form.Control
                     type="lastname"
                     placeholder="Lastname"
